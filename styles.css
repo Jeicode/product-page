@@ -1,0 +1,247 @@
+body {
+    font-family: "Lato", sans-serif;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .main {
+    display: flex;
+    flex-direction: column;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+  }
+  
+  /* ======== Header ========*/
+  #header {
+    display: flex;
+    max-width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 20px;
+    position: sticky;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: #f1c40f;
+  }
+  
+  .logo {
+    display: flex;
+    height: 100px;
+    width: 250px;
+  }
+  
+  .logo img {
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  #nav-bar {
+    display: flex;
+    flex-grow: 1;
+    min-height: 80px;
+    align-items: center;
+  }
+  
+  #nav-bar ul {
+    text-align: center;
+    padding: 0;
+  }
+  
+  #nav-bar ul li {
+    display: block;
+    margin-bottom: 20px;
+  }
+  
+  #nav-bar ul li a {
+    color: #000000;
+    font-size: 20px;
+    text-decoration: none;
+  }
+  
+  /* ======== Form ========*/
+  #inicio {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+  }
+
+  #inicio h2 {
+    text-align: center;
+    padding: 10px;
+  }
+
+  #inicio a {
+    padding: 10px 40px;
+    background-color: #f1c40f;
+    font-size: 24px;
+    border: none;
+    border-radius: 4px;
+    margin: 15px;
+    cursor: pointer;
+    text-decoration: none;
+    color:black;
+  }
+
+  #inicio a:hover {
+    background-color: grey;
+    color: white;
+  }
+  
+  /* ======== Features ========*/
+  #features {
+    max-width: 100%;
+    margin: 50px auto 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  #features .card {
+    display: flex;
+    align-items: center;
+  }
+  
+  #features .card .icon {
+    max-width: 100px;
+    width: 100%;
+    color: #ff8c00;
+    display: none;
+  }
+  
+  #features .card .content {
+    flex-grow: 1;
+    text-align: center;
+  }
+  
+  /* ======== Pricing ========*/
+  #pricing {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #pricing .card {
+    margin: 0 50px;
+    margin-bottom: 15px;
+    border: 1px solid #000;
+    max-width: 340px;
+    width: 100%;
+    border-radius: 4px;
+    text-align: center;
+  }
+  
+  #pricing .card h2 {
+    background-color: black;
+    color: white;
+    padding: 15px 0;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: 15px;
+  }
+  
+  #pricing .card strong {
+    font-size: 24px;
+  }
+  
+  #pricing .card button {
+    border: 0;
+    margin: 15px 0;
+    background-color: #f1c40f;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 24px;
+  }
+
+  #pricing .card button:hover {
+    background-color: grey;
+    color: white;
+  }
+  
+  /* ======== Footer ========*/
+  footer {
+    padding: 20px;
+    margin-top: 30px;
+    text-align: center;
+    background-color: black;
+    color: white;
+  }
+  
+  footer > ul {
+    padding: 0;
+  }
+  
+  footer > ul li {
+    display: inline;
+  }
+  
+  footer > ul li:not(last-child) {
+    margin-right: 10px;
+  }
+  
+  footer > ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* ======== Media query ========*/
+  @media (min-width: 550px) {
+    #inicio {
+      display: block;
+      text-align: center;
+    }
+  }
+
+  @media (min-width: 550px) {
+    #features .card .icon {
+      display: block;
+    }
+  
+    #features .card .content {
+      text-align: left;
+    }
+  }
+  
+  @media (min-width: 600px) {
+    #header {
+      flex-direction: row;
+      left: 5%;
+      right: 5%;
+      position: sticky;
+    }
+  
+    #nav-bar ul {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+    }
+  
+    #nav-bar ul li {
+      display: inline;
+      margin-right: 50px;
+    }
+  
+    #nav-bar ul li:last-child {
+      margin-right: 0;
+    }
+  }
+  
+  @media (min-width: 800px) {
+    #pricing {
+      flex-direction: row;
+      align-self: center;
+    }
+  
+    #pricing .card:not(last-child) {
+      margin-right: 15px;
+    }
+  }
