@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
     font-family: "Lato", sans-serif;
     background-color: white;
@@ -8,24 +15,24 @@ body {
   .main {
     display: flex;
     flex-direction: column;
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 0 20px;
     position: relative;
+    margin: 0 10em;
   }
   
   /* ======== Header ========*/
   #header {
-    display: flex;
-    max-width: 100%;
-    flex-direction: column;
-    align-items: center;
-    padding: 15px 20px;
-    position: sticky;
     left: 0;
     right: 0;
     top: 0;
+    height: 100px;
     background-color: #f1c40f;
+    padding: 0 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 1;
   }
   
   .logo {
@@ -33,17 +40,12 @@ body {
     height: 100px;
     width: 250px;
   }
-  
-  .logo img {
-    width: 100%;
-    max-width: 400px;
-  }
+
   
   #nav-bar {
     display: flex;
-    flex-grow: 1;
-    min-height: 80px;
     align-items: center;
+    padding-right: 30px;
   }
   
   #nav-bar ul {
@@ -53,7 +55,6 @@ body {
   
   #nav-bar ul li {
     display: block;
-    margin-bottom: 20px;
   }
   
   #nav-bar ul li a {
@@ -62,7 +63,7 @@ body {
     text-decoration: none;
   }
   
-  /* ======== Form ========*/
+  /* ======== Main ========*/
   #inicio {
     max-width: 100%;
     display: flex;
@@ -74,6 +75,7 @@ body {
   #inicio h2 {
     text-align: center;
     padding: 10px;
+    margin: 1.5em auto;
   }
 
   #inicio a {
@@ -86,6 +88,7 @@ body {
     cursor: pointer;
     text-decoration: none;
     color:black;
+    transition: ease-out 300ms;
   }
 
   #inicio a:hover {
@@ -96,7 +99,7 @@ body {
   /* ======== Features ========*/
   #features {
     max-width: 100%;
-    margin: 50px auto 100px;
+    margin: 7em auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -110,13 +113,18 @@ body {
   #features .card .icon {
     max-width: 100px;
     width: 100%;
-    color: #ff8c00;
+    color: #f1c40f;
     display: none;
   }
   
   #features .card .content {
     flex-grow: 1;
     text-align: center;
+    margin: 1.5em 0;
+  }
+
+  .content p {
+    margin-top: .5em;
   }
   
   /* ======== Pricing ========*/
@@ -124,11 +132,13 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
+    margin: 3em auto;
   }
   
   #pricing .card {
     margin: 0 50px;
     margin-bottom: 15px;
+    padding-bottom: 1em;
     border: 1px solid #000;
     max-width: 340px;
     width: 100%;
@@ -160,6 +170,7 @@ body {
     border-radius: 2px;
     cursor: pointer;
     font-size: 24px;
+    transition: ease-out 300ms;
   }
 
   #pricing .card button:hover {
@@ -169,11 +180,15 @@ body {
   
   /* ======== Footer ========*/
   footer {
-    padding: 20px;
+    height: 5em;
+    padding: 0 3em;
     margin-top: 30px;
     text-align: center;
     background-color: black;
     color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   
   footer > ul {
@@ -185,20 +200,156 @@ body {
   }
   
   footer > ul li:not(last-child) {
-    margin-right: 10px;
+    margin-right: 20px;
   }
   
   footer > ul li a {
     color: white;
     text-decoration: none;
+    transition: ease-out 300ms;
+  }
+
+  footer > ul li a:hover {
+    color: #f1c40f;
   }
   
   /* ======== Media query ========*/
-  @media (min-width: 550px) {
+  @media (max-width: 375px) {
+    #header {
+      height:max-content;
+      padding-bottom: 2em;
+      margin: 0 auto;
+    }
+    
+    .logo {
+      flex-direction: column;
+      justify-content: center;
+      height: 100px;
+      width: 200px;
+    }
+
+    #nav-bar {
+      padding-right: 0;
+    }
+    
+    #nav-bar ul li {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 15px;
+      border-bottom: 1px solid #000;
+    }
+
+    .main {
+      margin: 15em 25px 3em;
+    }
+
     #inicio {
-      display: block;
+      display: flex;
       text-align: center;
     }
+
+    #features {
+      flex-direction: column;
+    }
+
+    #features .card {
+      flex-direction: column;
+      margin: 1.5em auto;
+      justify-content: center;
+    }
+
+    #features .card .icon {
+      display: flex;
+      justify-content: center;
+    }
+
+    #pricing {
+      margin: 0;
+      padding: 0;
+    }
+
+    #pricing .card {
+      margin: 0 0 15px;
+      padding-bottom: 1em;
+
+    }
+
+    footer {
+      flex-direction: column-reverse;
+      justify-content: space-evenly;
+      height: 8em;
+      margin-top: 0; 
+    }
+
+  }
+
+  @media (max-width: 425px) {
+    #header {
+      height:max-content;
+      padding-bottom: 2em;
+      margin: 0 auto;
+    }
+    
+    .logo {
+      flex-direction: column;
+      justify-content: center;
+      height: 100px;
+      width: 200px;
+    }
+
+    #nav-bar {
+      padding-right: 0;
+    }
+    
+    #nav-bar ul li {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 15px;
+      border-bottom: 1px solid #000;
+    }
+
+    .main {
+      margin: 15em 25px 3em;
+    }
+
+    #inicio {
+      display: flex;
+      text-align: center;
+    }
+
+    #features {
+      flex-direction: column;
+    }
+
+    #features .card {
+      flex-direction: column;
+      margin: 1.5em auto;
+      justify-content: center;
+    }
+
+    #features .card .icon {
+      display: flex;
+      justify-content: center;
+    }
+
+    #pricing {
+      margin: 0;
+      padding: 0;
+    }
+
+    #pricing .card {
+      margin: 0 auto 15px;
+      padding-bottom: 1em;
+
+    }
+
+    footer {
+      flex-direction: column-reverse;
+      justify-content: space-evenly;
+      height: 8em;
+      margin-top: 0; 
+    }
+
   }
 
   @media (min-width: 550px) {
