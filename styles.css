@@ -352,6 +352,20 @@ body {
 
   }
 
+  @media (max-width: 1024px) {
+    #pricing {
+      margin: 0;
+      padding: 0;
+    }
+
+    #pricing .card {
+      margin: 0 auto 15px;
+      padding-bottom: 1em;
+
+    }
+
+  }
+
   @media (min-width: 550px) {
     #features .card .icon {
       display: block;
